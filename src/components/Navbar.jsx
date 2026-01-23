@@ -2,7 +2,7 @@ import React from "react";
 import { Link } from "react-router";
 import styles from "../styleModules/navbar.module.css";
 
-const Navbar = () => {
+const Navbar = ({ totalProductsCount }) => {
   return (
     <nav className={styles.navbar}>
       <Link className={styles.link} to="">
@@ -14,7 +14,7 @@ const Navbar = () => {
       </Link>
 
       <Link className={styles.link} to="cart">
-        Cart
+        Cart {totalProductsCount == 0 ? "" : `(${totalProductsCount})`}
       </Link>
     </nav>
   );

@@ -5,8 +5,7 @@ import { useState } from "react";
 
 const Layout = () => {
   const [cartProducts, setCartProducts] = useState([]);
-  // const totalProducts = cartProducts.length;
-  // console.log(totalProducts);
+  const totalProductsCount = cartProducts.length;
 
   function addToCart(product) {
     setCartProducts([...cartProducts, product]);
@@ -22,7 +21,7 @@ const Layout = () => {
     <>
       <header className={styles.header}>
         <h1 className={styles.storeName}>My Shop</h1>
-        <Navbar />
+        <Navbar totalProductsCount={totalProductsCount} />
       </header>
       <main className={styles.main}>
         <Outlet context={cartData} />
