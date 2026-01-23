@@ -1,10 +1,15 @@
 .header {
   display: flex;
-  width: 100vw;
   background-color: blue;
 }
 
 .storeName {
   padding-left: 10px;
   padding-right: 100px;
+}
+
+.main {
+  display: flex;
+  width: 100%;
+  align-items: center;
 }

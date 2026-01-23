@@ -1,0 +1,20 @@
+.card {
+  /* height: 300px; */
+  width: 200px;
+  border: 1px black solid;
+}
+
+.imageContainer {
+  width: 100px;
+  border: 1px black solid;
+}
+
+.productImage {
+  width: 100%;
+  height: auto;
+}
+
+.productTitle {
+  font-size: 1em;
+  border: red solid 1px;
+}

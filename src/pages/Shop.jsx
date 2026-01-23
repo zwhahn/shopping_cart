@@ -1,5 +1,6 @@
 import useProducts from "../hooks/getProducts";
 import Card from "../components/Card";
+import styles from "../styleModules/shop.module.css";
 
 const Shop = () => {
   const { products, loading, error } = useProducts();
@@ -8,7 +9,7 @@ const Shop = () => {
   if (error) return <p>Error: {error}</p>;
 
   return (
-    <div className="cardContainer">
+    <div className={styles.cardContainer}>
       {products.map((product) => (
         <Card
           key={product.id}
