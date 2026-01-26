@@ -19,3 +19,29 @@
   width: 100%;
   align-items: center;
 }
+
+footer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: lightgray;
+}
+
+footer a {
+  display: flex;
+  text-decoration: none;
+  align-items: center;
+  gap: 5px;
+  color: #000;
+  cursor: pointer;
+  padding: 5px;
+}
+
+#github-link {
+  font-size: 1.5rem;
+  font-family: VT323;
+}
+
+footer img {
+  height: 1.3rem;
+}

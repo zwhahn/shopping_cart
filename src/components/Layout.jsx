@@ -2,6 +2,7 @@ import { Outlet } from "react-router";
 import Navbar from "./Navbar";
 import styles from "../styleModules/layout.module.css";
 import { useState } from "react";
+import githubMark from "../assets/githubMark.png";
 
 const Layout = () => {
   const [cartProducts, setCartProducts] = useState({});
@@ -57,6 +58,12 @@ const Layout = () => {
           <Outlet context={cartData} />
         </main>
       </div>
+      <footer>
+        <a href="https://github.com/zwhahn">
+          <span id="github-link">zwhahn</span>
+          <img src={githubMark} alt="GitHub Invertocat logo" />
+        </a>
+      </footer>
     </>
   );
 };
