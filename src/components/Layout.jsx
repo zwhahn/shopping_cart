@@ -4,12 +4,21 @@ import styles from "../styleModules/layout.module.css";
 import { useState } from "react";
 
 const Layout = () => {
-  const [cartProducts, setCartProducts] = useState([]);
-  const totalProductsCount = cartProducts.length;
+  const [cartProducts, setCartProducts] = useState({});
+  const totalProductsCount = Object.values(cartProducts).reduce(
+    (sum, curr) => curr.quantity + sum,
+    0,
+  );
 
-  function addToCart(product) {
-    setCartProducts([...cartProducts, product]);
-    return;
+  function addToCart(product, quantity) {
+    setCartProducts((prevCart) => ({
+      ...prevCart,
+      [product.id]: {
+        ...product,
+        quantity:
+          Number(prevCart[product.id]?.quantity || 0) + Number(quantity),
+      },
+    }));
   }
 
   const cartData = {
