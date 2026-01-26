@@ -15,13 +15,16 @@ const Card = ({ product, addToCart }) => {
         <img className={styles.productImage} src={product.image}></img>
       </div>
       <h2 className={styles.productTitle}>{product.title}</h2>
-      <form onSubmit={handleSubmit}>
+      <form onSubmit={handleSubmit} className={styles.form}>
         <input
+          className={styles.input}
           type="number"
           min="0"
           onChange={(e) => setQuantity(e.target.value)}
         ></input>
-        <button type="submit">Add to Cart</button>
+        <button className={styles.addToCartBtn} type="submit">
+          Add to Cart
+        </button>
       </form>
     </div>
   );
