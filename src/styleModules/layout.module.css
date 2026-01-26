@@ -1,10 +1,13 @@
 .header {
   display: flex;
-  background-color: blue;
+}
+
+.pageContainer {
+  display: grid;
+  padding: 0px 60px;
 }
 
 .storeName {
-  padding-left: 10px;
   padding-right: 100px;
 }
 

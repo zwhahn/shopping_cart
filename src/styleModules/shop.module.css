@@ -1,8 +1,7 @@
 .cardContainer {
   width: 100%;
   display: grid;
-  padding: 0px 30px;
-  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
-  background-color: blueviolet;
-  justify-items: center;
+  grid-template-columns: repeat(auto-fill, 200px);
+  gap: 20px;
+  justify-content: space-between;
 }
