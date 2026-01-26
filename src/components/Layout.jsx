@@ -48,11 +48,11 @@ const Layout = () => {
 
   return (
     <>
+      <header className={styles.header}>
+        <h1 className={styles.storeName}>My Shop</h1>
+        <Navbar totalProductsCount={totalProductsCount} />
+      </header>
       <div className={styles.pageContainer}>
-        <header className={styles.header}>
-          <h1 className={styles.storeName}>My Shop</h1>
-          <Navbar totalProductsCount={totalProductsCount} />
-        </header>
         <main className={styles.main}>
           <Outlet context={cartData} />
         </main>
