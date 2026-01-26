@@ -21,9 +21,20 @@ const Layout = () => {
     }));
   }
 
+  function setQuantity(product, quantity) {
+    setCartProducts((prevCart) => ({
+      ...prevCart,
+      [product.id]: {
+        ...product,
+        quantity: Number(quantity),
+      },
+    }));
+  }
+
   const cartData = {
     cartProducts: cartProducts,
     addToCart: addToCart,
+    setQuantity: setQuantity,
   };
 
   return (
