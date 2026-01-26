@@ -8,7 +8,7 @@ const Cart = () => {
     <ul>
       {Object.values(cartProducts).map((product) => (
         <li key={product.id}>
-          {product.title} :{" "}
+          {product.title} :
           <input
             type="number"
             defaultValue={product.quantity}
