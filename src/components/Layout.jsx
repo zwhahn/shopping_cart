@@ -31,10 +31,19 @@ const Layout = () => {
     }));
   }
 
+  function removeProduct(productId) {
+    setCartProducts((prevCart) => {
+      const newCart = { ...prevCart };
+      delete newCart[productId];
+      return newCart;
+    });
+  }
+
   const cartData = {
     cartProducts: cartProducts,
     addToCart: addToCart,
     setQuantity: setQuantity,
+    removeProduct: removeProduct,
   };
 
   return (

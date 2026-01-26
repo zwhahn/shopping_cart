@@ -1,7 +1,7 @@
 import { useOutletContext } from "react-router";
 
 const Cart = () => {
-  const { cartProducts, setQuantity } = useOutletContext();
+  const { cartProducts, setQuantity, removeProduct } = useOutletContext();
   console.log("cartProducts: ", cartProducts);
 
   return (
@@ -14,6 +14,9 @@ const Cart = () => {
             defaultValue={product.quantity}
             onChange={(e) => setQuantity(product, Number(e.target.value))}
           ></input>
+          <button type="delete" onClick={() => removeProduct(product.id)}>
+            Delete
+          </button>
         </li>
       ))}
     </ul>
