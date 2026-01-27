@@ -1,25 +1,28 @@
 import { useOutletContext } from "react-router";
+import styles from "../styleModules/cart.module.css";
 
 const Cart = () => {
   const { cartProducts, setQuantity, removeProduct } = useOutletContext();
   console.log("cartProducts: ", cartProducts);
 
   return (
-    <ul>
+    <div className={styles.cartContainer}>
       {Object.values(cartProducts).map((product) => (
-        <li key={product.id}>
-          {product.title} :
-          <input
-            type="number"
-            defaultValue={product.quantity}
-            onChange={(e) => setQuantity(product, Number(e.target.value))}
-          ></input>
-          <button type="delete" onClick={() => removeProduct(product.id)}>
-            Delete
-          </button>
-        </li>
+        <div className={styles.cartItemContainer} key={product.id}>
+          <div className={styles.productTitle}>{product.title}</div>
+          <div className={styles.productQuantity}>
+            <input
+              type="number"
+              defaultValue={product.quantity}
+              onChange={(e) => setQuantity(product, Number(e.target.value))}
+            ></input>
+            <button className={styles.deletetBtn} type="delete" onClick={() => removeProduct(product.id)}>
+              Delete
+            </button>
+          </div>
+        </div>
       ))}
-    </ul>
+    </div>
   );
 };
 
