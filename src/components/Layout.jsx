@@ -51,7 +51,7 @@ const Layout = () => {
     <>
       <div className={styles.siteContainer}>
         <header className={styles.header}>
-          <h1 className={styles.storeName}>My Shop</h1>
+          <h1 className={styles.storeName}>My Whimsical Shop</h1>
           <Navbar totalProductsCount={totalProductsCount} />
         </header>
         <div className={styles.pageContainer}>

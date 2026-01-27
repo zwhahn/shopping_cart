@@ -1,8 +1,15 @@
+@font-face {
+  font-family: "HennyPenny";
+  src: url("../assets/fonts/HennyPenny-Regular.ttf") format("truetype");
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+
 .header {
   display: flex;
   background-color: #FE7F2D;
   padding: 0px 60px;
-  /* box-shadow: 0px 8px 1px #222222; */
   flex-shrink: 0;
 }
 
@@ -26,6 +33,7 @@
 }
 
 .storeName {
+  font-family: "HennyPenny", Arial, Helvetica, sans-serif;
   padding-right: 100px;
 }
 
