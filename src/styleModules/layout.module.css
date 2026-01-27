@@ -13,7 +13,6 @@
 }
 
 .pageContainer {
-  display: grid;
   padding: 30px 60px;
   flex-grow: 1;
 }
