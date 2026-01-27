@@ -49,21 +49,23 @@ const Layout = () => {
 
   return (
     <>
-      <header className={styles.header}>
-        <h1 className={styles.storeName}>My Shop</h1>
-        <Navbar totalProductsCount={totalProductsCount} />
-      </header>
-      <div className={styles.pageContainer}>
-        <main className={styles.main}>
-          <Outlet context={cartData} />
-        </main>
+      <div className={styles.siteContainer}>
+        <header className={styles.header}>
+          <h1 className={styles.storeName}>My Shop</h1>
+          <Navbar totalProductsCount={totalProductsCount} />
+        </header>
+        <div className={styles.pageContainer}>
+          <main className={styles.main}>
+            <Outlet context={cartData} />
+          </main>
+        </div>
+        <footer>
+          <a href="https://github.com/zwhahn">
+            <span id="github-link">zwhahn</span>
+            <img src={githubMark} alt="GitHub Invertocat logo" />
+          </a>
+        </footer>
       </div>
-      <footer>
-        <a href="https://github.com/zwhahn">
-          <span id="github-link">zwhahn</span>
-          <img src={githubMark} alt="GitHub Invertocat logo" />
-        </a>
-      </footer>
     </>
   );
 };
