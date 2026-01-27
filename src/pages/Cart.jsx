@@ -7,29 +7,33 @@ const Cart = () => {
 
   return (
     <div className={styles.cartContainer}>
-      {Object.values(cartProducts).map((product) => (
-        <div className={styles.cartItemContainer} key={product.id}>
-          <div className={styles.imageContainer}>
-            <img className={styles.productImage} src={product.image}></img>
+      {Object.values(cartProducts).length === 0 ? (
+        <h1 className={styles.emptyCart}>Empty Cart</h1>
+      ) : (
+        Object.values(cartProducts).map((product) => (
+          <div className={styles.cartItemContainer} key={product.id}>
+            <div className={styles.imageContainer}>
+              <img className={styles.productImage} src={product.image}></img>
+            </div>
+            <div className={styles.productTitle}>{product.title}</div>
+            <div className={styles.productQuantity}>
+              <input
+                type="number"
+                defaultValue={product.quantity}
+                min="0"
+                onChange={(e) => setQuantity(product, Number(e.target.value))}
+              ></input>
+              <button
+                className={styles.deletetBtn}
+                type="delete"
+                onClick={() => removeProduct(product.id)}
+              >
+                Delete
+              </button>
+            </div>
           </div>
-          <div className={styles.productTitle}>{product.title}</div>
-          <div className={styles.productQuantity}>
-            <input
-              type="number"
-              defaultValue={product.quantity}
-              min="0"
-              onChange={(e) => setQuantity(product, Number(e.target.value))}
-            ></input>
-            <button
-              className={styles.deletetBtn}
-              type="delete"
-              onClick={() => removeProduct(product.id)}
-            >
-              Delete
-            </button>
-          </div>
-        </div>
-      ))}
+        ))
+      )}
     </div>
   );
 };

@@ -1,3 +1,11 @@
+@font-face {
+  font-family: "HennyPenny";
+  src: url("../assets/fonts/HennyPenny-Regular.ttf") format("truetype");
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+
 .cartContainer {
   display: grid;
   gap: 30px;
@@ -60,4 +68,9 @@ input {
   padding: 4px 8px;
   cursor: pointer;
   border-radius: 8px;
+}
+
+.emptyCart {
+  font-family: "HennyPenny", Arial, Helvetica, sans-serif;
+  font-size: 3rem;
 }
