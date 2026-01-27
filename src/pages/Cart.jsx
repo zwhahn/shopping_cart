@@ -17,6 +17,7 @@ const Cart = () => {
             <input
               type="number"
               defaultValue={product.quantity}
+              min="0"
               onChange={(e) => setQuantity(product, Number(e.target.value))}
             ></input>
             <button
