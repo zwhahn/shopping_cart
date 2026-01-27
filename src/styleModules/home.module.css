@@ -32,3 +32,8 @@
   /* border: 2px red solid; */
   margin: 0px;
 }
+
+.description {
+  font-style: italic;
+  font-weight: bold;
+}

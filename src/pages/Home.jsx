@@ -9,7 +9,7 @@ const Home = () => {
           <h2 className={styles.welcome}>Welcome To</h2>
           <h1 className={styles.title}>My Whimsical Shop</h1>
         </div>
-        <p>
+        <p className={styles.description}>
           All items are sourced locally from{" "}
           <a href="https://fakestoreapi.com/">FakestoreAPI</a> and all sales are
           not final. Enjoy Shopping!
