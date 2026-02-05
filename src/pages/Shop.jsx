@@ -8,7 +8,6 @@ const Shop = () => {
   const { addToCart } = useOutletContext();
   const { products, loading, error } = useProducts();
   const [search, setSearch] = useState("");
-  // const [filteredProducts, setFilteredProducts] = useState(products);
 
   function handleSearch(e) {
     const newSeach = e.target.value;
